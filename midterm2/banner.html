@@ -24,17 +24,17 @@
 		.card {
 			width: 18rem;
 			margin-bottom: 30px;
-			margin:10px;
+			margin: 10px;
 		}
 
 		.card img {
-			height: 200px; 
-			object-fit: cover; 
+			height: 200px;
+			object-fit: cover;
 		}
 
 		.main-content {
 			padding: 20px;
-			height: 2000px;
+			height: 1200px;
 			background-color: white;
 		}
 	</style>
@@ -43,19 +43,19 @@
 <body>
 	<section>
 		<div class="keyart" id="parallax">
-			<div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>
-			<div class="keyart_layer parallax" id="keyart-1" data-speed="10"></div>
-			<div class="keyart_layer parallax" id="keyart-2" data-speed="11"></div>
-			<div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div>
-			<div class="keyart_layer parallax" id="keyart-4" data-speed="26"></div>
-			<div class="keyart_layer parallax" id="keyart-5" data-speed="36"></div>
-			<div class="keyart_layer parallax" id="keyart-6" data-speed="49"></div>
+			<div class="keyart_layer parallax" id="keyart-0" data-speed="50"></div>
+			<div class="keyart_layer parallax" id="keyart-1" data-speed="65"></div>
+			<div class="keyart_layer parallax" id="keyart-2" data-speed="70"></div>
+			<div class="keyart_layer parallax" id="keyart-3" data-speed="30"></div>
+			<div class="keyart_layer parallax" id="keyart-4" data-speed="50"></div>
+			<div class="keyart_layer parallax" id="keyart-5" data-speed="80"></div>
+			<div class="keyart_layer parallax" id="keyart-6" data-speed="20"></div>
 			<div class="keyart_layer parallax" id="keyart-7" data-speed="69"></div>
 			<div class="keyart_layer" id="keyart-8" data-speed="100"></div>
 		</div>
 	</section>
 
-	<section class="main-content">
+	<div class="main-content">
 		<div>
 			<h1 style="text-align: center; color: #333;"><strong>The Beauty of Chess</strong></h1>
 			<p style="text-align: center; color: #555; max-width: 1200px; padding: 20px;"> Chess is a board game played
@@ -89,35 +89,34 @@
 		</div>
 
 		<div class="container">
-			<div class="row justify-content-center text-center">
-				<h1 class="justify-content-center"><strong>Chess Components</strong></h1>
-				<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-					<div class="card">
-						<img src="images/chessboard.jpg" class="card-img-top  img-fluid" alt="Chess Strategy">
+			<h1 class="justify-content-center  text-center py-20px"><strong>Chess Components</strong></h1>
+			<div class="row mt-4">
+				<div class="col-md-4 mb-4">
+					<div class="card highlightCard">
+						<img src="images/chessboard.jpg" class="card-img-top" alt="Chessboard">
 						<div class="card-body">
-							<h5 class="card-title"><strong>Chessboard</strong></h5>
-							<p class="card-text">A chessboard is an 8x8 grid of alternating light and dark squares, used
+							<h5 class="card-title">Chess Board</h5>
+							<p class="card-text">>A chessboard is an 8x8 grid of alternating light and dark squares,
+								used
 								as the playing surface for the game of chess.</p>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-					<div class="card">
-						<img src="images/chesspiece.jpg" class="card-img-top img-fluid" alt="Chess Tournaments">
+				<div class="col-md-4 mb-4">
+					<div class="card highlightCard">
+						<img src="images/chesspiece.jpg" class="card-img-top" alt="chesspiece">
 						<div class="card-body">
-							<h5 class="card-title"><strong>Chess pieces</strong></h5>
-							<p class="card-text">Chess pieces include the king, queen, rooks, knights, bishops, and
+							<h5 class="card-title">Chess Pieces</h5>
+							<p class="card-text"> Chess pieces include the king, queen, rooks, knights, bishops, and
 								pawns, each with unique movement rules and roles in the game.</p>
 						</div>
 					</div>
 				</div>
-
-				<div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-					<div class="card">
-						<img src="images/chessclock.jpg" class="card-img-top img-fluid" alt="Chess Community">
+				<div class="col-md-4 mb-4">
+					<div class="card highlightCard">
+						<img src="images/chessclock.jpg" class="card-img-top" alt="chessclock">
 						<div class="card-body">
-							<h5 class="card-title"><strong>Chess Clock</strong></h5>
+							<h5 class="card-title">Chess Clock</h5>
 							<p class="card-text">Used to track each player's allotted
 								time during a game, pausing when a player makes a move and starting for the opponent.
 							</p>
@@ -126,7 +125,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
