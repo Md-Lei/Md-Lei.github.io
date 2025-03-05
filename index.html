@@ -85,7 +85,7 @@
         <p class="lead text-center"> IT Student </p>
 
         <div class="row mt-4">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="mb-4">
                     <h3><strong>About me</strong></h3>
                     <p class="text-justify">Hi! I'm Mike Dharen Lei F. Luansing, a third-year college student from
@@ -110,11 +110,10 @@
                             <h3 class="card-title"><strong>Contact info</strong></h3>
                             <p class="card-text">
                                 <strong>Phone:</strong> +639515601606 <br>
-                                <strong>Email:</strong> <a href="mailto:dharenlei21@gmail.com"
-                                    >dharenlei21@gmail.com</a>
+                                <strong>Email:</strong> <a href="mailto:dharenlei21@gmail.com">dharenlei21@gmail.com</a>
                                 <br>
-                                <strong>Facebook:</strong><a href="https://www.facebook.com/Mike.Dharen.07 "
-                                    > Mike Dharen Luansing </a>
+                                <strong>Facebook:</strong><a href="https://www.facebook.com/Mike.Dharen.07 "> Mike
+                                    Dharen Luansing </a>
                             </p>
                         </div>
                     </div>
@@ -122,12 +121,12 @@
                 </div>
             </div>
 
-            <div class="col-md-4 mb-3">
-                <h3>Projects</h3>
+            <div class="col-md-3 mb-3">
+                <h3>Web Development Projects</h3>
                 <button id="toggleButton" class="btn w-100 mb-3" type="button" data-bs-toggle="collapse"
                     data-bs-target="#projectList" aria-expanded="false" aria-controls="projectList"
                     onclick="toggleButtonText()">
-                    Show Projects
+                    View Project List
                 </button>
                 <div class="collapse" id="projectList">
                     <div class="list-group">
@@ -143,6 +142,35 @@
                             class="list-group-item list-group-item-action">The Queens Gambit</button>
                         <button onclick="window.location.href='midterm2/banner.html'"
                             class="list-group-item list-group-item-action">Beauty of chess</button>
+                    </div>
+                </div>
+            </div>
+            <!-- </div>
+    </div> -->
+
+            <!-- APP DEV -->
+
+            <div class="col-md-3 mb-3">
+                <h3>App Development Projects</h3>
+                <button id="appToggleButton" class="btn w-100 mb-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#appprojectList" aria-expanded="false" aria-controls="appprojectList"
+                    onclick="toggleButtonText()">
+                    View Project List
+                </button>
+                <div class="collapse" id="appprojectList">
+                    <div class="list-group">
+                        <button onclick="window.location.href='appDevelopment/A01.html'"
+                            class="list-group-item list-group-item-action">Under Construction</button>
+                        <!-- <button onclick="window.location.href='activity5/place.html'"
+                            class="list-group-item list-group-item-action">The Tanauan City</button>
+                        <button onclick="window.location.href='activity6/gallery.html'"
+                            class="list-group-item list-group-item-action">Juan Luna's Gallery</button>
+                        <button onclick="window.location.href='activity7/index.html'"
+                            class="list-group-item list-group-item-action">Hajime no Ippo</button>
+                        <button onclick="window.location.href='midterm1/index.html'"
+                            class="list-group-item list-group-item-action">The Queens Gambit</button>
+                        <button onclick="window.location.href='midterm2/banner.html'"
+                            class="list-group-item list-group-item-action">Beauty of chess</button> -->
                     </div>
                 </div>
             </div>
@@ -162,9 +190,17 @@
         function toggleButtonText() {
             var toggleButton = document.getElementById('toggleButton');
             var isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
-            toggleButton.textContent = isExpanded ? 'Hide Projects' : 'Show Projects';
+            toggleButton.textContent = isExpanded ? 'Hide Projects' : 'Show Projets';
         }
     </script>
+
+<script>
+    function toggleButtonText() {
+        var toggleButton = document.getElementById('appToggleButton');
+        var isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+        toggleButton.textContent = isExpanded ? 'Hide Projects' : 'Show Projets';
+    }
+</script>
 </body>
 
 </html>
