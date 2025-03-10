@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, #f8f9fa, #e0e0e0);
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+
+        .container,
+        .row {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .card {
+            height: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+            max-width: 100%;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: #3b3486;
+            color: #ffe9b1;
+        }
+
+        .card-title {
+            margin-bottom: 5px;
+        }
+
+        .card-body {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .navbar-brand {
+            flex-grow: 1;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .container-fluid {
+            padding: 0 15px;
+        }
+
+        body[data-bs-theme="dark"] {
+            background: #333;
+            color: #f8f9fa;
+        }
+
+        body[data-bs-theme="light"] {
+            background: #f8f9fa;
+            color: #212529;
+        }
+    </style>
+
+    <link rel="icon" href="images/logo.png">
+
+</head>
+
+<body id="body" data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">The Gallery</span>
+            <button class="btn btn-outline-secondary" id="btnMode" onclick="changeMode()" type="button">Mode</button>
+        </div>
+    </nav>
+
+    <div class="juan text-center mt-5 mb-2">
+        <img src="images/Juan.jpg" class="img-fluid mx-auto" alt="Juan Luna"
+            style="box-shadow: 0 6px 10px rgba(24, 24, 24, 0.2);">
+    </div>
+    <div class="container-fluid text-center">
+        <div class="row mt-5">
+            <h1 class="display-3"><strong>Juan Luna's Painting Gallery</strong></h1>
+        </div>
+        <div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-center" id="cardContainer">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col mt-3" style="background-color: rgb(223, 222, 222); height: 5px;"></div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col text-center">
+                <h5 class="display-6 mt-2 mb-0"><strong>About info </strong>
+                    <button type="button" onclick="expandContent()" class="btn btn-outline-secondary"
+                        id="btnExpand">Read</button>
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="footer" style="display: none;">
+        <div class="row">
+            <div class="col p-5 text-center">
+                <p class="display-2">
+                <div class="juan text-center mt-0 mb-2">
+                    <img src="images/juan luna.jpg" class="img-fluid mx-auto" alt="Juan Luna"
+                        style="box-shadow: 0 6px 10px rgba(24, 24, 24, 0.2);">
+                    <h2><strong>Juan Luna</strong></h2>
+                    <p>Juan Luna de San Pedro y Novicio Ancheta was born in a town called Badoc, located in the northern
+                        Philippines. Luna was a Filipino painter, sculptor, and political activist of the Philippine
+                        Revolution during the late 19th century. He became one of the first recognized Philippine
+                        artists. He won a gold medal in the 1884 Madrid Exposition of Fine Arts.</p>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col text-center">
+                <p class="display-6 mt-2 mb-3"><strong>Exhibitions, Awards and Collections lists </strong>
+                    <button type="button" onclick="expandContents()" class="btn btn-outline-secondary"
+                        id="bttnExpand">Read</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="award" style="display: none;">
+        <div class="row">
+            <div class="col text-center">
+                <p class="display-2">
+                <div class="awards text-left mt-0 mb-2">
+                    <p>
+                        <li>Nacional de Bellas Artes, ​Madrid, 1881</li>
+                        <li>Silver Medal for La Muerte de Cleopatra, 1881</li>
+                        <li>Nacional de Bellas Artes, ​Madrid, 1884</li>
+                        <li>Gold Medal for Spolarium 1884</li>
+                        <li>National Museum of Fine Arts, Manila</li>
+                        <li>Ayala Museum, Manila</li>
+                        <li>Metropolitan Museum of Manila</li>
+                        <li>Lopez Museum, Pasig</li>
+                        <li>Government Service Insurance System, Pasay</li>
+                        <li>Malacañan Palace, Manila</li>
+                    </p>
+                </div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-center">
+        <div class="row d-flex justify-content-center p-5">
+            <div class="col">
+                <button onclick="window.location.href='../index.html'" type="button"
+                    class="btn btn-outline-secondary">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-3" style="background-color: #3b3486; width:100%; color: #ffe9b1;">
+        © 2024 Copyright: MikeDharen.github.io
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+    <script>
+        var titles = ["Spoliarium", "Las Damas Romanas", "Tampuhan", "The Blood Compact", "The Death of Cleopatra", "The Parisian Life", "The Battle of Lepanto", "Odalisque"];
+        var pics = ["spolarium.jpg", "las Damas Romanas.jpg", "tampuhan.jpg", "the blood compact.jpg", "the death of cleopatra.jpg", "the parisian life.jpg", "the battle of lepanto.jpg", "odalisque.jpg"];
+        var years = ["1884", "1882", "1895", "1885", "1881", "1892", "1887", "1885"];
+
+        for (var i = 0; i < titles.length; i++) {
+            var myContainer = document.getElementById("cardContainer");
+            myContainer.innerHTML +=
+                '<div class="col-xl-3 col-md-4 col-sm-6 col-12 mb-3 d-flex justify-content-center text-center">' +
+                '<div class="card my-3 w-100" onmouseenter="showYear(' + i + ')" onmouseleave="hideYear(' + i + ')">' +
+                '<img src="images/' + pics[i] + '" class="card-img-top img-fluid" alt="' + titles[i] + '">' +
+                '<div class="card-body">' +
+                '<h5 class="card-title" id="title-' + i + '">' + titles[i] + '</h5>' +
+                '<p class="card-text"></p>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+        }
+
+        function showYear(i) {
+            var titleElement = document.getElementById('title-' + i);
+            titleElement.innerHTML = years[i];
+        }
+
+        function hideYear(i) {
+            var titleElement = document.getElementById('title-' + i);
+            titleElement.innerHTML = titles[i];
+        }
+
+        var display = "none";
+        function expandContent() {
+            var footer = document.getElementById("footer");
+            var btnExpand = document.getElementById("btnExpand");
+
+            if (display == "none") {
+                footer.style.display = "block";
+                display = "block";
+                btnExpand.innerHTML = "Hide";
+            } else {
+                footer.style.display = "none";
+                display = "none";
+                btnExpand.innerHTML = "Read";
+            }
+        }
+
+        function expandContents() {
+            var footer = document.getElementById("award");
+            var bttnExpand = document.getElementById("bttnExpand");
+
+            if (display == "none") {
+                award.style.display = "block";
+                display = "block";
+                bttnExpand.innerHTML = "Hide";
+            } else {
+                award.style.display = "none";
+                display = "none";
+                bttnExpand.innerHTML = "Read";
+            }
+        }
+        var colorMode = "light";
+        function changeMode() {
+            if (colorMode == "light") {
+                document.getElementById("body").setAttribute("data-bs-theme", "dark");
+                document.getElementById("btnMode").innerHTML = "Light Mode";
+                colorMode = "dark";
+            } else {
+                document.getElementById("body").setAttribute("data-bs-theme", "light");
+                document.getElementById("btnMode").innerHTML = "Dark Mode";
+                colorMode = "light";
+            }
+        }
+    </script>
+</body>
+
+</html>
