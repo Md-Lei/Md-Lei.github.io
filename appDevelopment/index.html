@@ -1,96 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My App Development Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Dharen's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background: url('resources/bg3.webp') no-repeat center center fixed;
-            background-size: cover;
-            background-color: aliceblue;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #0d0d0d, #121212, #1f1f2e);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .top-bar img {
-            height: 120px;
-            width: auto;
+        .container {
+            max-width: 900px;
+            text-align: center;
         }
 
-        .project-img {
-            height: 200px;
-            width: 100%;
-            max-width: 300px;
-            display: block;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            background: white;
-            transition: transform 0.3s ease-in-out;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+            color: white;
         }
 
-        .project-img:hover {
+        .btn-custom {
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: grey;
             transform: scale(1.05);
         }
 
-        .social-icons {
+        .project-gallery {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            flex-wrap: wrap;
             gap: 15px;
+            justify-content: center;
             margin-top: 20px;
         }
 
-        .social-icons div {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
+        .project-item {
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.3s;
         }
 
-        .social-icons img {
-            height: 40px;
-            width: auto;
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 100%;
+            border-radius: 10px;
         }
     </style>
+    <link rel="icon" href="../resources/plogo.png">
 </head>
 
 <body>
+    <div class="container py-3">
+        <img src="../resources/plogo.png" alt="Logo" style="height: 100px; margin-bottom: 15px;">
 
-    <div class="top-bar text-white text-center" style="background-color: black;">
-        <img src="../resources/landingLogo.avif" alt="Landing Logo" class="top-bar-image">
-    </div>
-
-    <div class="text-center p-5" style="font-weight: bold; font-size: 30px;">
-        My App Development Portfolio
-    </div>
-
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-12 col-sm-6 col-md-4 p-3">
-                <a href="underConstruction.html">
-                    <img src="resources/notice.jpg" alt="Project 1" class="project-img p-3">
+        <div class="glass-card mt-4">
+            <h3>App Development Projects</h3>
+            <div class="project-gallery">
+                <a href="underConstruction.html" class="project-item">
+                    <img src="resources/working.png" alt="under construction">
+                </a>
+                <a href="underConstruction.html" class="project-item">
+                    <img src="resources/working.png" alt="under construction">
                 </a>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 p-3">
-                <a href="underConstruction.html">
-                    <img src="resources/questionMark.png" alt="Project 2" class="project-img p-3">
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 p-3">
-                <a href="underConstruction.html">
-                    <img src="resources/questionMark.png" alt="Project 3" class="project-img p-3">
-                </a>
+            <div class="col py-3">
+                <button onclick="window.location.href='../index.html'" type="button"
+                    class="btn btn-outline-secondary">Home</button>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
-
+    <footer class="mt-5 text-center">
+        <p>&copy; 2024 Md-Lei.github.io</p>
+    </footer>
 </body>
 
 </html>
