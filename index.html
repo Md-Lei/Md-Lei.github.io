@@ -10,14 +10,14 @@
 
     <style>
         body {
-            background: linear-gradient(to bottom, #0d0d0d, #121212, #1f1f2e);
+            background:  #1f1f2e;
             font-family: Arial, sans-serif;
             background-size: cover;
             color: white;
         }
 
         @media (max-width: 768px) {
-            .social-icons {
+            .social-icons{
                 display: none;
             }
         }
@@ -61,6 +61,21 @@
             height: 40px;
             width: auto;
         }
+
+        .webdev {
+            height: 200px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .webdev:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .webdev {
+                height: 140px;
+            }
+        }
     </style>
 
     <link rel="icon" href="resources/plogo.png">
@@ -69,23 +84,26 @@
 
 <body>
 
-    <div class="top-bar text-white text-center" style="background-color: black;">
+    <div class="top-bar text-white text-center" style="background-color:#1e1e2b;">
         <img src="resources/plogo.png" alt="landingLogo" class="top-bar-image">
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-6 d-flex flex-column align-items-center order-1 order-md-2">
-                <a href="webDevelopment/index.html">
+                <a href="WD/index.html">
                     <img src="resources/webdev.png" alt="webdev" class="webdev p-3 mt-5">
                 </a>
-                <a href="appDevelopment/index.html">
+                <a href="ADET/index.html">
                     <img src="resources/appdev.png" alt="appdev" class="webdev mt-3 p-3 mb-5">
                 </a>
             </div>
 
-            <div class="col-md-6 p-5 order-2 order-md-1 d-none d-md-block" style="font-weight: bold; font-size: 40px;">
-                MD-Luansing <br> Works
+            <div class="col-md-6 p-5 order-2 order-md-1" style="font-weight: bold; font-size: 40px;">
+                MD-Luansing
+                <div class="line"
+                    style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, white, transparent); margin: 20px auto;">
+                </div>
                 <div class="social-icons">
                     <div>
                         <img src="resources/github.png" alt="GitHub">
