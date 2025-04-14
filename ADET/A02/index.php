@@ -77,7 +77,7 @@ if (isset($_GET['page'])) {
     }
   </style>
 
-  <link rel="icon" href="../../resources/plogo.png">
+<link rel="icon" href="../../resources/plogo.png">
 
 </head>
 
@@ -102,11 +102,11 @@ if (isset($_GET['page'])) {
 
       <!-- BANNER -->
       <div class="col-md-4 d-flex flex-column gap-3 py-3 order-1 order-md-2">
-        <div class="card shadow p-4 flex-grow-1 d-flex flex-column justify-content-center" style="background: url('images/chessLogo.png') no-repeat center center;  background-size: contain; height: 200px; background-color: #384d2f;">
+        <div class="card shadow p-4 flex-grow-1 d-flex flex-column justify-content-center" style="background: url('images/chessAreaLogo.png') no-repeat center center;  background-size: contain; height: 200px; background-color: #384d2f;">
         </div>
 
         <!-- BUTTON -->
-        <div class="card shadow p-4 flex-grow-1 d-flex flex-column justify-content-center mb-2" style="background-color: #384d2f;">
+        <div class="card shadow p-4 flex-grow-1 d-flex flex-column justify-content-center mb-2 order-3 order-md-3" style="background-color: #384d2f;">
           <a href="?page=puzzle" class="btn  text-white d-flex justify-content-center align-items-center my-2" style=" font-size: 24px;;">
             <strong>PLAY GAME</strong>
           </a>
