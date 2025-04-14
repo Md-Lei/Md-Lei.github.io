@@ -65,7 +65,7 @@ $openings = [
                 <img src="<?php echo $opening[0]; ?>" class="img-fluid rounded-start" alt="<?php echo $opening[1]; ?>">
             </div>
             <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body shadow-sm" style="background-color: #f5f2e9;">
                     <h5 class="card-title"><?php echo $opening[1]; ?></h5>
                     <p class="card-text">Starts with <strong><?php echo $opening[2]; ?></strong>. <?php echo $opening[3]; ?></p>
                     <p><strong>Key Ideas:</strong> <?php echo $opening[4]; ?></p>

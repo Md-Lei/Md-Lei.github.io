@@ -9,7 +9,7 @@ $chessPlayers = [
 ];
 ?>
 
-<div style="text-align: center; margin-top: 30px; color: white;">
+<div style="text-align: center; margin-top: 30px; color: white; padding: 3px;">
   <h2><strong>World Chess Players</strong></h2>
 
   <?php foreach ($chessPlayers as $player) { ?>
