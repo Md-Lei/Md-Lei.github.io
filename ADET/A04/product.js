@@ -7,7 +7,7 @@ var products = [
                 "name": "Espresso",
 
                 "code": "ESP",
-                "img": "espresso.png",
+                "img": "Espresso.png",
                 "sizes": [
                     { "name": "(16oz)", "code": "(16oz)", "price": 90 },
                     { "name": "(22oz)", "code": "(22oz)", "price": 110 }
@@ -24,7 +24,7 @@ var products = [
             },
             {
                 "name": "Cappuccino",
-                "img": "capuccino.png",
+                "img": "Capuccino.png",
                 "code": "CAP",
                 "sizes": [
                     { "name": "(16oz)", "code": "(16oz)", "price": 120 },
