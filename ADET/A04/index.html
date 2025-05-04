@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffee Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #fdf6f0;
+            font-family: 'Poppins', sans-serif;
+            color: #4b3621;
+        }
+
+
+        .custom-button.content {
+            width: 200px;
+            height: 200px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .custom-button.content small,
+        .custom-button.conten {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            padding: 6px;
+        }
+
+        .customized-button {
+            width: 100px;
+            color: #4A4A4A;
+            border: none;
+            border-radius: 12px;
+            padding: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .customized-button.content {
+            width: 200px;
+
+        }
+
+        .customized-button:hover {
+            background-color: #a7793d;
+            transform: translateY(-2px);
+            cursor: pointer;
+        }
+
+        .topcontainer {
+            overflow-y: hidden;
+            height: 20dvh;
+            background-color: #fff9f5;
+            border-radius: 16px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            justify-content: center;
+        }
+
+        .categories {
+            width: fit-content;
+            gap: 12px;
+        }
+
+        .topcontainer::-webkit-scrollbar,
+        .maincontainer::-webkit-scrollbar,
+        .sidecontainer::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        .topcontainer::-webkit-scrollbar-track,
+        .maincontainer::-webkit-scrollbar-track,
+        .sidecontainer::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 10px;
+        }
+
+        .topcontainer::-webkit-scrollbar-thumb,
+        .maincontainer::-webkit-scrollbar-thumb,
+        .sidecontainer::-webkit-scrollbar-thumb {
+            background-color: #c7a17a;
+            border-radius: 8px;
+        }
+
+        .topcontainer::-webkit-scrollbar-button,
+        .maincontainer::-webkit-scrollbar-button,
+        .sidecontainer::-webkit-scrollbar-button {
+            display: none;
+            height: 0;
+            width: 0;
+        }
+
+        .maincontainer {
+            overflow-x: hidden;
+            height: 70dvh;
+            background-color: #fff9f5;
+            border-radius: 16px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            overflow-y: auto;
+        }
+
+        .sidecontainer {
+            height: 92dvh;
+            background-color: #fff9f5;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        #totalValue {
+            font-size: 1.2rem;
+            color: #4b3621;
+        }
+
+        .card {
+            border: none;
+        }
+    </style>
+
+<link rel="icon" href="../../resources/plogo.png">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row pt-3">
+            <div class="col-12 col-lg-9">
+                <div class="row">
+                    <div class="col pb-3">
+                        <div class="card shadow p-3 topcontainer" style="overflow-x: auto; white-space: nowrap;">
+                            <div class="d-flex flex-row" id="categories" style="min-width: max-content;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow overflow-y p-3 maincontainer">
+                            <div class="d-flex justify-content-center flex-wrap" id="maincontainer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3 mt-3 mt-lg-0">
+                <div class="card p-3 shadow sidecontainer">
+                    <div>
+                        <div class="h3 text-center fw-bold mb-3"
+                            style="color: #6b4f31; font-family: 'Courier New', Courier, monospace;">
+                            Mike's Coffee Shop and Restaurant
+                        </div>
+                        <h5
+                            style="font-weight: 600; color: #5a4229; border-bottom: 1px solid #e4d3c0; padding-bottom: 8px; margin-bottom: 12px; font-family: 'Courier New', Courier, monospace;">
+                            Receipt
+                        </h5>
+                        <div id="receipt"></div>
+                    </div>
+                    <div class="total-area d-flex justify-content-between mt-auto pt-2 border-top">
+                        <b style="font-family: 'Courier New', Courier, monospace;">Total:</b>
+                        <b style="font-family: 'Courier New', Courier, monospace;" id="totalValue">₱0</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="product.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
