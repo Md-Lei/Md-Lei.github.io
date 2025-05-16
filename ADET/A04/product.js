@@ -5,94 +5,163 @@ var products = [
         "contents": [
             {
                 "name": "Espresso",
-
-                "code": "ESP",
                 "img": "Espresso.png",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 90 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 110 }
-                ]
+                "code": "ESP",
+                "price": 90,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Espresso",
+                "img": "Espresso.png",
+                "code": "ESP",
+                "price": 110,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Americano",
                 "img": "Americano.png",
                 "code": "AME",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 100 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 120 }
-                ]
+                "price": 100,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Americano",
+                "img": "Americano.png",
+                "code": "AME",
+                "price": 120,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Cappuccino",
                 "img": "Capuccino.png",
                 "code": "CAP",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 120 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 140 }
-                ]
+                "price": 120,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Cappuccino",
+                "img": "Capuccino.png",
+                "code": "CAP",
+                "price": 140,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Mocha",
                 "img": "mocha.png",
                 "code": "MOC",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 130 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 150 }
-                ]
+                "price": 130,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Mocha",
+                "img": "mocha.png",
+                "code": "MOC",
+                "price": 150,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Matcha Latte",
                 "img": "matchaLatte.png",
                 "code": "MLT",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 115 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 135 }
-                ]
+                "price": 115,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Matcha Latte",
+                "img": "matchaLatte.png",
+                "code": "MLT",
+                "price": 135,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Caramel Macchiato",
                 "img": "caramelMacchiato.png",
                 "code": "CAM",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 125 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 145 }
-                ]
+                "price": 125,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Caramel Macchiato",
+                "img": "caramelMacchiato.png",
+                "code": "CAM",
+                "price": 145,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Salted Caramel",
                 "img": "saltedCaramel.png",
                 "code": "SAL",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 140 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 160 }
-                ]
+                "price": 140,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Salted Caramel",
+                "img": "saltedCaramel.png",
+                "code": "SAL",
+                "price": 160,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Spanish Latte",
                 "img": "spanishLatte.png",
                 "code": "SPA",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 150 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 170 }
-                ]
+                "price": 150,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Spanish Latte",
+                "img": "spanishLatte.png",
+                "code": "SPA",
+                "price": 170,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Matcha Coffee",
                 "img": "matchaLatte.png",
                 "code": "MCF",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 110 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 130 }
-                ]
+                "price": 110,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Matcha Coffee",
+                "img": "matchaLatte.png",
+                "code": "MCF",
+                "price": 130,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Brewed Coffee",
                 "img": "brewedCoffee.png",
                 "code": "BWC",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 90 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 110 }
-                ]
+                "price": 90,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Brewed Coffee",
+                "img": "brewedCoffee.png",
+                "code": "BWC",
+                "price": 110,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             }
         ]
     },
@@ -106,113 +175,196 @@ var products = [
                 "name": "Iced Americano",
                 "img": "icedAmericano.png",
                 "code": "IAM",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 110 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 130 }
-                ]
+                "price": 110,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Iced Americano",
+                "img": "icedAmericano.png",
+                "code": "IAM",
+                "price": 130,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Iced Mocha",
                 "img": "icedMocha.png",
                 "code": "IMO",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 125 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 145 }
-                ]
+                "price": 125,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Iced Mocha",
+                "img": "icedMocha.png",
+                "code": "IMO",
+                "price": 145,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Cold Brew",
                 "img": "coldBrew.png",
                 "code": "CBW",
-                "isThisAvailable": false,
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 130 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 150 }
-                ]
+                "price": 130,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Cold Brew",
+                "img": "coldBrew.png",
+                "code": "CBW",
+                "price": 150,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Cheese Cake",
                 "img": "cheeseCake.png",
                 "code": "CHC",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 150 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 170 }
-                ]
+                "price": 150,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Cheese Cake",
+                "img": "cheeseCake.png",
+                "code": "CHC",
+                "price": 170,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Iced Salted Caramel",
                 "img": "icedSaltedCaramel.png",
                 "code": "ISC",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 120 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 140 }
-                ]
+                "price": 120,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Iced Salted Caramel",
+                "img": "icedSaltedCaramel.png",
+                "code": "ISC",
+                "price": 140,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Iced Macchiato",
                 "img": "icedMacchiato.png",
                 "code": "IMA",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 125 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 145 }
-                ]
+                "price": 125,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Iced Macchiato",
+                "img": "icedMacchiato.png",
+                "code": "IMA",
+                "price": 145,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Iced Caramel Latte",
                 "img": "icedCaramelLatte.png",
                 "code": "ICL",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 135 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 155 }
-                ]
+                "price": 135,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Iced Caramel Latte",
+                "img": "icedCaramelLatte.png",
+                "code": "ICL",
+                "price": 155,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Iced Spanish Latte",
                 "img": "icedSpanishLatte.png",
                 "code": "ISL",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 140 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 160 }
-                ]
+                "price": 140,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Iced Spanish Latte",
+                "img": "icedSpanishLatte.png",
+                "code": "ISL",
+                "price": 160,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Iced White Chocolate",
                 "img": "icedWhiteChocolate.png",
                 "code": "IWC",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 140 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 160 }
-                ]
+                "price": 140,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Iced White Chocolate",
+                "img": "icedWhiteChocolate.png",
+                "code": "IWC",
+                "price": 160,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Iced Vanilla Latte",
                 "img": "icedVanillaLatte.png",
                 "code": "IVL",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 135 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 155 }
-                ]
+                "price": 135,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Iced Vanilla Latte",
+                "img": "icedVanillaLatte.png",
+                "code": "IVL",
+                "price": 155,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Iced Hazelnut Latte",
                 "img": "icedChocoHM.png",
                 "code": "IHL",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 135 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 155 }
-                ]
+                "price": 135,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Iced Hazelnut Latte",
+                "img": "icedChocoHM.png",
+                "code": "IHL",
+                "price": 155,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Iced Matcha Latte",
                 "img": "icedMatchaLatte.png",
                 "code": "IML",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 140 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 160 }
-                ]
+                "price": 140,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
             },
-
+            {
+                "name": "Iced Matcha Latte",
+                "img": "icedMatchaLatte.png",
+                "code": "IML",
+                "price": 160,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
+            }
         ]
+
     },
 
     {
@@ -223,93 +375,164 @@ var products = [
                 "name": "Taro Milk Tea",
                 "img": "taro.png",
                 "code": "TMT",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 130 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 150 }
-                ]
+                "price": 130,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Taro Milk Tea",
+                "img": "taro.png",
+                "code": "TMT",
+                "price": 150,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Matcha Milk Tea",
                 "img": "matcha.png",
                 "code": "MMT",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 135 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 155 }
-                ]
+                "price": 135,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Matcha Milk Tea",
+                "img": "matcha.png",
+                "code": "MMT",
+                "price": 155,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Okinawa",
                 "img": "okinawa.png",
                 "code": "HMT",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 140 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 160 }
-                ]
+                "price": 140,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Okinawa",
+                "img": "okinawa.png",
+                "code": "HMT",
+                "price": 160,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Strawberry Milk Tea",
                 "img": "strawberry.png",
                 "code": "SMT",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 130 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 150 }
-                ]
+                "price": 130,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Strawberry Milk Tea",
+                "img": "strawberry.png",
+                "code": "SMT",
+                "price": 150,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Wintermelon Milk Tea",
                 "img": "wintermelon.png",
                 "code": "WMT",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 125 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 145 }
-                ]
+                "price": 125,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Wintermelon Milk Tea",
+                "img": "wintermelon.png",
+                "code": "WMT",
+                "price": 145,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Chocolate Milk Tea",
                 "img": "chocolate.png",
                 "code": "CMT2",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 140 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 160 }
-                ]
+                "price": 140,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Chocolate Milk Tea",
+                "img": "chocolate.png",
+                "code": "CMT2",
+                "price": 160,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Choco Brown Sugar Milk Tea",
                 "img": "cbst.png",
                 "code": "CBSMT",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 145 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 165 }
-                ]
+                "price": 145,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Choco Brown Sugar Milk Tea",
+                "img": "cbst.png",
+                "code": "CBSMT",
+                "price": 165,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Cookies and Cream Milk Tea",
                 "img": "cnc.png",
                 "code": "CCMT",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 150 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 170 }
-                ]
+                "price": 150,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Cookies and Cream Milk Tea",
+                "img": "cnc.png",
+                "code": "CCMT",
+                "price": 170,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Caramel Milk Tea",
                 "img": "caramel.png",
                 "code": "CMT3",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 150 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 170 }
-                ]
+                "price": 150,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Caramel Milk Tea",
+                "img": "caramel.png",
+                "code": "CMT3",
+                "price": 170,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Ube Milk Tea",
                 "img": "ube.png",
                 "code": "UMT",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 140 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 160 }
-                ]
+                "price": 140,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Ube Milk Tea",
+                "img": "ube.png",
+                "code": "UMT",
+                "price": 160,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             }
         ]
+
     },
 
     {
@@ -320,46 +543,81 @@ var products = [
                 "name": "Strawberry Smoothie",
                 "img": "strawb.png",
                 "code": "SSM",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 140 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 160 }
-                ]
+                "price": 140,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Strawberry Smoothie",
+                "img": "strawb.png",
+                "code": "SSM",
+                "price": 160,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Mango Smoothie",
                 "img": "mango.png",
                 "code": "MSM",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 140 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 160 }
-                ]
+                "price": 140,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Mango Smoothie",
+                "img": "mango.png",
+                "code": "MSM",
+                "price": 160,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Banana Smoothie",
                 "img": "banana.png",
                 "code": "BSM",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 135 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 155 }
-                ]
+                "price": 135,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Banana Smoothie",
+                "img": "banana.png",
+                "code": "BSM",
+                "price": 155,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Berry Blast Smoothie",
                 "img": "bbs.png",
                 "code": "BBS",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 150 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 170 }
-                ]
+                "price": 150,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Berry Blast Smoothie",
+                "img": "bbs.png",
+                "code": "BBS",
+                "price": 170,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             },
             {
                 "name": "Green Apple Smoothie",
                 "img": "greenApple.png",
                 "code": "GAS",
-                "sizes": [
-                    { "name": "(16oz)", "code": "(16oz)", "price": 145 },
-                    { "name": "(22oz)", "code": "(22oz)", "price": 165 }
-                ]
+                "price": 145,
+                "sizes": "16oz",
+                "sizeCode": "(16oz)"
+            },
+            {
+                "name": "Green Apple Smoothie",
+                "img": "greenApple.png",
+                "code": "GAS",
+                "price": 165,
+                "sizes": "22oz",
+                "sizeCode": "(22oz)"
             }
         ]
     },
@@ -626,26 +884,16 @@ function loadProducts(categoryIndex) {
 
     var product = products[categoryIndex];
 
-    products[categoryIndex].contents.forEach(content => {
-        if (content.sizes && content.sizes.length > 0) {
-            content.sizes.forEach(size => {
-                maincontainer.innerHTML += `
-          <div onclick="addToReceipt('`+ size.price + `','` + content.code + size.code + `')" 
+    product.contents.forEach(content => {
+        maincontainer.innerHTML += `
+          <div onclick="addToReceipt('` + content.price + `','` + content.code + content.sizeCode + `')" 
                class="card mx-3 my-2 custom-button content p-5 text-center" style="background-image: url('images/` + content.img + `'); background-size: cover;">
-            <small>`+ content.name + ' ' + size.code + `</small>
+            <small>` + content.name + ' ' + content.sizeCode + `</small>
           </div>
         `;
-            });
-        } else {
-            maincontainer.innerHTML += `
-      <div onclick="addToReceipt('`+ content.price + `','` + content.code + `')" 
-           class="card mx-3 my-2 custom-button content p-5 text-center"  style="background-image: url('images/` + content.img + `'); background-size: cover;">
-        <small>`+ content.name + `</small>
-      </div>
-    `;
-        }
     });
 }
+
 
 function addToReceipt(price, code) {
     var receiptContainer = document.getElementById("receipt");
