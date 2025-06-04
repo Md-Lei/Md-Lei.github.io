@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sale Countdown</title>
+    <style>
+        nav.navbar {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            gap: 20px;
+        }
+
+        .navbar-brand h5 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .countdown {
+            font-size: 20px;
+            font-weight:bold;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="navbar-brand mb-0 h1">
+                <h5>Sale Ends In</h5>
+                <div class="countdown" id="demo"></div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const countDownDate = new Date("2025-06-10T23:37:25").getTime();
+
+        const x = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("demo").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
