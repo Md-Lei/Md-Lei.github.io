@@ -1,195 +1,252 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Tanauan City</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../../resources/plogo.png" />
 
     <style>
-        .title {
-            background-size: cover;
-            background-position: center;
-            height: 30vh;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            color: rgb(10, 9, 9);
-            background-color: gray;
-        }
-
-        .highlightCard img {
-            height: 200px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-            object-fit: cover;
-        }
-
-        .highlightCard img:hover {
-            background-color: #3b3486;
-            color: #ffe9b1;
-            transform: scale(1.07);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-        }
-
-        .map img:hover {
-            height: 200px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-            transform: scale(1.5);
-            object-fit: cover;
-        }
-
-        .parade {
-            display: flex;
-            justify-content: center;
-        }
-
-        .parade img {
-            justify-content: center;
-            display: flex;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f5f7;
+        color: #333;
+        line-height: 1.6;
+      }
+      .title {
+        background:
+          linear-gradient(rgba(59, 52, 134, 0.7), rgba(111, 82, 255, 0.7)),
+          url("images/tanauan-bg.jpg") center/cover no-repeat;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+      }
+      .title h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .title p {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .section-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 32px;
+        margin: 60px 0 40px 0;
+        background: linear-gradient(90deg, #3b3486, #6f52ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .highlightCard {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        margin-bottom: 30px;
+      }
+      .highlightCard img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .parade {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+      }
+      .parade img {
+        max-width: 800px;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      }
+      .content-text {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+      }
+      .btn-outline-primary {
+        border-color: #6f52ff;
+        color: #6f52ff;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 10px 30px;
+      }
+      .btn-outline-primary:hover {
+        background-color: #6f52ff;
+        color: #fff;
+      }
+      footer {
+        background: linear-gradient(90deg, #3b3486, #6f52ff);
+        color: #ffe9b1;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 16px;
+      }
+      .map img {
+        max-width: 300px;
+        margin: 0 auto 30px auto;
+        display: block;
+      }
     </style>
+  </head>
 
-    <link rel="icon" href="../../resources/plogo.png">
-
-</head>
-
-<body>
+  <body>
     <div class="title">
-        <div class="tanauanTitle ">
-            <h1><Strong>Welcome to Tanauan City</Strong></h1>
-            <p>The Cradle of Noble Heroes</p>
+      <h1>Welcome to Tanauan City</h1>
+      <p>The Cradle of Noble Heroes</p>
+    </div>
+
+    <h2 class="section-title">Tanauan City Location</h2>
+    <div class="map">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ph_locator_batangas_tanauan.svg/250px-Ph_locator_batangas_tanauan.svg.png"
+        alt="Tanauan Map"
+      />
+    </div>
+
+    <h2 class="section-title">Key Landmarks</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card highlightCard">
+            <img src="images/cityHall.jpg" alt="City Hall" />
+            <div class="card-body">
+              <h5 class="card-title">Tanauan City Hall</h5>
+              <p class="content-text">
+                The administrative hub of the local government, providing public
+                services to the community.
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
-
-
-    <h2 class=" map text-center mt-4"><strong> Tanauan City Location </strong></h2>
-    <div class="text-center map">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ph_locator_batangas_tanauan.svg/250px-Ph_locator_batangas_tanauan.svg.png
-        " class="img-fluid" alt="Tanauan Map">
-    </div>
-
-    <div class="container my-10">
-        <h3 class="text-center mt-4"><strong> Key Landmarks </strong></h3>
-        <div class="container my-5">
-            <div class="row mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="card highlightCard">
-                        <img src="images/cityHall.jpg" class="card-img-top" alt="City Hall">
-                        <div class="card-body">
-                            <h5 class="card-title">Tanauan City Hall</h5>
-                            <p class="card-text">A government building that serves as the administrative hub for the
-                                local government for city's governance and public services.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card highlightCard">
-                        <img src="https://photos.wikimapia.org/p/00/05/79/03/70_big.jpg" class="card-img-top"
-                            alt="Tanauan Museum">
-                        <div class="card-body">
-                            <h5 class="card-title">Tanauan Museum</h5>
-                            <p class="card-text"> The Tanauan Museum also known as Tanauan Heritage showcases a
-                                collection that reflects the rich heritage of the Tanaueño.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card highlightCard">
-                        <img src="https://www.beautyofthephilippines.com/wp-content/uploads/2014/02/2024-01-03-Tanauan_Church_batangas_mariano_sayno_husayno.com_-2014.02.08_DSC_0006-MarianoSayno-768x427.jpg"
-                            class="card-img-top" alt="Tanauan City Church">
-                        <div class="card-body">
-                            <h5 class="card-title">Tanauan City Basilica</h5>
-                            <p class="card-text">Also known as St.John the Evangelist Paris Church continues to meet the
-                                religious needs of Tanauenos. A perfect destibation for who those seeking seeking's
-                                spiritual enrichment.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-6">
+          <div class="card highlightCard">
+            <img
+              src="https://photos.wikimapia.org/p/00/05/79/03/70_big.jpg"
+              alt="Tanauan Museum"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tanauan Museum</h5>
+              <p class="content-text">
+                Showcasing the rich heritage of the Tanaueños and preserving
+                historical artifacts.
+              </p>
             </div>
+          </div>
         </div>
-
-        <!-- HEROES TO -->
-        <div class="container my-5 align-items: center">
-            <h3 class="text-center"><strong> Heroes Heritage </strong></h3>
-            <div class="container my-5">
-                <div class="row mt-4 justify-content-center">
-                    <div class="col-md-4 mb-4">
-                        <div class="card highlightCard">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIQfGHsdTIYaMIxdt8zAsbyhdAB4DEdsLNSYERph9vQKJbvhu_nM0kSHKskU9_s8U7_Dw&usqp=CAU"
-                                class="card-img-top" alt="Mabini Shrine">
-                            <div class="card-body">
-                                <h5 class="card-title">Apolinario Mabini Shrine</h5>
-                                <p class="card-text"> A tribute to great hero Apolinario Mabini. The shrines located in
-                                    Apolinario Mabini's birthplace at Barangay Talaga, Tanauan, Batangas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card highlightCard">
-                            <img src="https://tanauancity.gov.ph/wp-content/uploads/2022/09/JOSE-P.-LAUREL-ANCESTRAL-HOUSE.jpg"
-                                class="card-img-top" alt="Jose P Laurel">
-                            <div class="card-body">
-                                <h5 class="card-title">Pres.Jose P. Laurel's House</h5>
-                                <p class="card-text">The late president's ancestral house was built in 1880 and was
-                                    restored in 1964. It takes in valued works, furniture's and personal effects.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card highlightCard">
+            <img
+              src="https://www.beautyofthephilippines.com/wp-content/uploads/2014/02/2024-01-03-Tanauan_Church_batangas_mariano_sayno_husayno.com_-2014.02.08_DSC_0006-MarianoSayno-768x427.jpg"
+              alt="Tanauan City Basilica"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tanauan City Basilica</h5>
+              <p class="content-text">
+                Also known as St. John the Evangelist Parish Church, a perfect
+                destination for spiritual enrichment.
+              </p>
             </div>
-
-            <div class="parade">
-                <h4><strong>The Parade of Lights</strong></h4>
-            </div>
-
-            <div class="parade">
-                <img src="https://live.staticflickr.com/7300/13074062474_b479b07f8c_b.jpg" class="img-fluid"
-                    alt="Parade of Lights">
-            </div>
-
-            <div class="parade-text text-center mt-3">
-                <p>The Parade of Lights is a celebration hosted by the City of Colors – Tanauan City, Batangas yearly
-                    every March. Experience the most colorful and brightest festive grand parade in the city!</p>
-            </div>
-
-            <div class="container my-5">
-                <h2 class="text-center">About Tanauan City</h2>
-                <p class="text-center">Meet Tanauan City! It is better known as the City of Colors and home of Parade of
-                    Lights.
-                    Tanauan City is a first-class city located in the province of Batangas,
-                    Philippines. The city is also known as the "Cradle of Noble Heroes," because of its contribution to
-                    the revolutionary movement of its sons Apolinario Mabini, the brains of Katipunan, and later by the
-                    statesman José P. Laurel. The city is a rapidly growing hub for industries while preserving its
-                    historical
-                    and
-                    cultural heritage.</p>
-            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="container d-flex justify-content-center">
-        <div class="row d-flex justify-content-center p-5">
-            <div class="col">
-                <button onclick="window.location.href='../index.html'" type="button"
-                    class="btn btn-outline-secondary">Home</button>
+        <div class="col-md-6">
+          <div class="card highlightCard">
+            <img
+              src="https://tanauancity.gov.ph/wp-content/uploads/2022/09/JOSE-P.-LAUREL-ANCESTRAL-HOUSE.jpg"
+              alt="Jose P Laurel"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Pres. Jose P. Laurel's House</h5>
+              <p class="content-text">
+                The late president's ancestral house built in 1880, showcasing
+                historical furniture and personal effects.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <div class="text-center p-3" style="background-color: #3b3486; width:100%; color: #ffe9b1;">
-        © 2024 Copyright: MikeDharen.github.io
+    <h2 class="section-title">Heroes Heritage</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card highlightCard">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIQfGHsdTIYaMIxdt8zAsbyhdAB4DEdsLNSYERph9vQKJbvhu_nM0kSHKskU9_s8U7_Dw&usqp=CAU"
+              alt="Mabini Shrine"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Apolinario Mabini Shrine</h5>
+              <p class="content-text">
+                A tribute to hero Apolinario Mabini, located in Barangay Talaga,
+                Tanauan.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card highlightCard">
+            <img
+              src="https://tanauancity.gov.ph/wp-content/uploads/2022/09/JOSE-P.-LAUREL-ANCESTRAL-HOUSE.jpg"
+              alt="Jose P Laurel"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Pres. Jose P. Laurel's House</h5>
+              <p class="content-text">
+                The late president's ancestral house built in 1880, showcasing
+                historical furniture and personal effects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <h2 class="section-title">The Parade of Lights</h2>
+    <div class="parade">
+      <img
+        src="https://live.staticflickr.com/7300/13074062474_b479b07f8c_b.jpg"
+        alt="Parade of Lights"
+      />
+    </div>
+    <p class="content-text text-center mx-auto" style="max-width: 800px">
+      The Parade of Lights is a colorful festival celebrated annually every
+      March, showcasing the brightest and most festive parade in Tanauan City.
+    </p>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+    <h2 class="section-title">About Tanauan City</h2>
+    <p class="content-text text-center mx-auto" style="max-width: 800px">
+      Tanauan City, the City of Colors, is a first-class city in Batangas,
+      Philippines. Known as the "Cradle of Noble Heroes," it is the birthplace
+      of Apolinario Mabini and José P. Laurel. The city blends historical
+      heritage with modern growth, making it a cultural and economic hub in the
+      region.
+    </p>
 
-</body>
+    <div class="d-flex justify-content-center mb-5">
+      <button
+        onclick="window.location.href = '../index.html'"
+        class="btn btn-outline-primary"
+      >
+        Back to Home
+      </button>
+    </div>
 
+    <footer>© 2024 Copyright: MikeDharen.github.io</footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
