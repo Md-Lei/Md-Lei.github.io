@@ -1,135 +1,331 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>md-works</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>md-works — Mike Dharen Luansing</title>
+<link rel="icon" href="resources/plogo.png">
 
-    <style>
-        body {
-            background:  #1f1f2e;
-            font-family: Arial, sans-serif;
-            background-size: cover;
-            color: white;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-        @media (max-width: 768px) {
-            .social-icons{
-                display: none;
-            }
-        }
+<style>
+  :root{
+    --bg: #1f1f2e;
+    --bg-deep: #17172371;
+    --text: #ffffff;
+    --muted: #b3b3d1;
+    --glass: rgba(255,255,255,0.06);
+    --glass-strong: rgba(255,255,255,0.10);
+    --glass-border: rgba(255,255,255,0.14);
+    --glow-a: #6f6fce;
+    --glow-b: #3d3d78;
+    --glow-c: #9a8cf0;
+    --radius: 22px;
+  }
 
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
 
-        .top-bar img {
-            height: 120px;
-            width: auto;
-        }
+  body{
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+  }
 
-        .webdev {
-            height: 200px;
-            width: auto;
-            display: block;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            background: white;
-            transition: transform 0.3s ease-in-out;
-        }
+  /* ---- ambient glow field ---- */
+  .glow{
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.55;
+  }
+  .glow-1{
+    width: 46vw; height: 46vw;
+    top: -14vw; left: -10vw;
+    background: radial-gradient(circle at 30% 30%, var(--glow-a), transparent 70%);
+    animation: float1 22s ease-in-out infinite;
+  }
+  .glow-2{
+    width: 40vw; height: 40vw;
+    bottom: -16vw; right: -8vw;
+    background: radial-gradient(circle at 60% 60%, var(--glow-b), transparent 70%);
+    animation: float2 26s ease-in-out infinite;
+  }
+  .glow-3{
+    width: 26vw; height: 26vw;
+    top: 32vh; right: 12vw;
+    background: radial-gradient(circle, var(--glow-c), transparent 70%);
+    opacity: 0.35;
+    animation: float3 18s ease-in-out infinite;
+  }
 
-        .webdev:hover {
-            transform: scale(1.05);
-        }
+  @keyframes float1{
+    0%,100%{ transform: translate(0,0); }
+    50%{ transform: translate(3vw, 4vh); }
+  }
+  @keyframes float2{
+    0%,100%{ transform: translate(0,0); }
+    50%{ transform: translate(-3vw, -3vh); }
+  }
+  @keyframes float3{
+    0%,100%{ transform: translate(0,0) scale(1); }
+    50%{ transform: translate(-2vw, 3vh) scale(1.08); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .glow-1, .glow-2, .glow-3{ animation: none; }
+  }
 
-        .social-icons {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 15px;
-            margin-top: 20px;
-        }
+  /* ---- glass base ---- */
+  .glass{
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  }
 
-        .social-icons div {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 18px;
-        }
+  /* ---- nav ---- */
+  .nav{
+    position: sticky;
+    top: 18px;
+    z-index: 10;
+    margin: 18px auto 0;
+    max-width: 920px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    width: calc(100% - 32px);
+  }
+  .brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .brand img{ height: 26px; width: auto; border-radius: 6px; }
 
-        .social-icons img {
-            height: 40px;
-            width: auto;
-        }
+  .nav-links{
+    display: flex;
+    gap: 6px;
+  }
+  .nav-links a{
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .nav-links a:hover{ background: var(--glass-strong); color: var(--text); }
+  .nav-links a:focus-visible{ outline: 2px solid var(--glow-c); outline-offset: 2px; }
 
-        .webdev {
-            height: 200px;
-            transition: transform 0.3s ease-in-out;
-        }
+  @media (max-width: 560px){
+    .nav-links a:not(.contact-link){ display: none; }
+  }
 
-        .webdev:hover {
-            transform: scale(1.05);
-        }
+  /* ---- layout ---- */
+  main{
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: clamp(48px, 10vw, 100px) 16px 60px;
+  }
 
-        @media (max-width: 768px) {
-            .webdev {
-                height: 140px;
-            }
-        }
-    </style>
+  .hero{
+    padding: clamp(36px, 6vw, 56px) clamp(24px, 6vw, 56px);
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .eyebrow{
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--glass-strong);
+    border: 1px solid var(--glass-border);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(34px, 7vw, 56px);
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+    background: linear-gradient(120deg, #ffffff, var(--glow-c));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero p{
+    color: var(--muted);
+    font-size: clamp(15px, 2.4vw, 18px);
+    max-width: 46ch;
+    margin: 0 auto;
+  }
 
-    <link rel="icon" href="resources/plogo.png">
+  /* ---- project cards ---- */
+  .projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 640px){
+    .projects{ grid-template-columns: 1fr; }
+  }
 
+  .project{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 30px 26px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  .project:hover{
+    transform: translateY(-6px);
+    border-color: rgba(154,140,240,0.5);
+    box-shadow: 0 16px 44px rgba(0,0,0,0.4), 0 0 40px rgba(154,140,240,0.18);
+  }
+  .project:focus-visible{ outline: 2px solid var(--glow-c); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce){
+    .project{ transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+    .project:hover{ transform: none; }
+  }
+
+  .project-icon{
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    background: var(--glass-strong);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  .project-icon img{ max-width: 32px; max-height: 32px; }
+
+  .project h2{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    margin: 0 0 6px;
+  }
+  .project p{
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 16px;
+  }
+  .project .cta{
+    font-size: 13px;
+    color: var(--glow-c);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ---- contact ---- */
+  .contact{
+    padding: 26px clamp(20px, 5vw, 40px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .contact-pill{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--glass-strong);
+    border: 1px solid var(--glass-border);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .contact-pill:hover{ background: rgba(255,255,255,0.16); transform: translateY(-2px); }
+  .contact-pill:focus-visible{ outline: 2px solid var(--glow-c); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce){
+    .contact-pill:hover{ transform: none; }
+  }
+  .contact-pill svg{ width: 16px; height: 16px; color: var(--muted); }
+</style>
 </head>
 
 <body>
+  <div class="glow glow-1" aria-hidden="true"></div>
+  <div class="glow glow-2" aria-hidden="true"></div>
+  <div class="glow glow-3" aria-hidden="true"></div>
 
-    <div class="top-bar text-white text-center" style="background-color:#1e1e2b;">
-        <img src="resources/plogo.png" alt="landingLogo" class="top-bar-image">
+  <nav class="nav glass" aria-label="Primary">
+    <div class="brand">
+      <img src="resources/plogo.png" alt="">
+      MD-Luansing
     </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 d-flex flex-column align-items-center order-1 order-md-2">
-                <a href="WD/index.html">
-                    <img src="resources/webdev.png" alt="webdev" class="webdev p-3 mt-5">
-                </a>
-                <a href="ADET/index.html">
-                    <img src="resources/appdev.png" alt="appdev" class="webdev mt-3 p-3 mb-5">
-                </a>
-            </div>
-
-            <div class="col-md-6 p-5 order-2 order-md-1" style="font-weight: bold; font-size: 40px;">
-                MD-Luansing
-                <div class="line"
-                    style="width: 80%; height: 2px; background: linear-gradient(to right, transparent, white, transparent); margin: 20px auto;">
-                </div>
-                <div class="social-icons">
-                    <div>
-                        <img src="resources/github.png" alt="GitHub">
-                        <span>md-lei</span>
-                    </div>
-                    <div>
-                        <img src="resources/facebook.png" alt="Facebook">
-                        <span>Mike Dharen Luansing</span>
-                    </div>
-                    <div>
-                        <img src="resources/email.png" alt="Email">
-                        <span>dharenlei21@gmail.com</span>
-                    </div>
-                    <div>
-                        <img src="resources/contact.png" alt="Contact">
-                        <span>0951601606</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="nav-links">
+      <a href="WD/index.html">Web Dev</a>
+      <a href="ADET/index.html">App Dev</a>
+      <a class="contact-link" href="#contact">Contact</a>
     </div>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+  <main>
+    <section class="hero glass">
+      <span class="eyebrow">Developer Portfolio</span>
+      <h1>Mike Dharen Luansing</h1>
+      <p>Building on the web and on mobile — explore both sides of the work below.</p>
+    </section>
 
+    <section class="projects">
+      <a class="project glass" href="WD/index.html">
+        <div class="project-icon"><img src="resources/webdev.png" alt=""></div>
+        <h2>Web Development</h2>
+        <p>Projects built for the browser.</p>
+        <span class="cta">Open project →</span>
+      </a>
+      <a class="project glass" href="ADET/index.html">
+        <div class="project-icon"><img src="resources/appdev.png" alt=""></div>
+        <h2>App Development</h2>
+        <p>Projects built for mobile.</p>
+        <span class="cta">Open project →</span>
+      </a>
+    </section>
+
+    <section class="contact glass" id="contact" aria-label="Contact">
+      <a class="contact-pill" href="https://github.com/md-lei" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.53 9.53 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        md-lei
+      </a>
+      <span class="contact-pill" role="text">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9V6.5A1.5 1.5 0 0 1 15.5 5H17V2h-2.5A4.5 4.5 0 0 0 10 6.5V9H8v3h2v10h3V12h2.6l.4-3H13V7a1 1 0 0 1 1-1Z"/></svg>
+        Mike Dharen Luansing
+      </span>
+      <a class="contact-pill" href="mailto:dharenlei21@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        dharenlei21@gmail.com
+      </a>
+      <a class="contact-pill" href="tel:+639515601606">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"/></svg>
+        0951 560 1606
+      </a>
+    </section>
+  </main>
 </body>
-
 </html>
