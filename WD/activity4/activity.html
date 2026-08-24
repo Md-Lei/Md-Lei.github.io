@@ -1,134 +1,179 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Realme 10</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="icon" href="../../resources/plogo.png" />
 
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f4f5f7;
-        color: #333;
-        line-height: 1.6;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Realme 10</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="icon" href="../../resources/plogo.png" />
 
-      /* Top Bar */
-      .top-bar {
-        background: linear-gradient(90deg, #3b3486, #6f52ff);
-        color: #fff;
-        padding: 0.7rem 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-weight: 600;
-        font-size: 1.2rem;
-      }
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f5f7;
+      color: #333;
+      line-height: 1.6;
+    }
 
-      .top-bar img {
-        height: 35px;
-      }
+    /* Top Bar */
+    .top-bar {
+      /* background: linear-gradient(90deg, #3b3486, #6f52ff);*/
+      color: #0b0b0b;
+      padding: 0.7rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
 
-      h2.section-title {
-        margin-top: 3rem;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(90deg, #3b3486, #6f52ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
-      }
+    .top-bar img {
+      height: 35px;
+    }
 
-      /* Cards */
-      .feature-card,
-      .design-card,
-      .performance-card {
-        transition:
-          transform 0.3s,
-          box-shadow 0.3s;
-        border: none;
-        border-radius: 20px;
-      }
+    h2.section-title {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(90deg, #3b3486, #6f52ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
 
-      .feature-card:hover,
-      .design-card:hover,
-      .performance-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      }
+    /* Cards */
+    .feature-card,
+    .design-card,
+    .performance-card {
+      transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+      border: none;
+      border-radius: 20px;
+    }
 
-      /* Images */
-      .img-fluid {
-        border-radius: 20px;
-        transition: transform 0.3s ease;
-      }
+    .feature-card:hover,
+    .design-card:hover,
+    .performance-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
 
-      .img-fluid:hover {
-        transform: scale(1.05);
-      }
+    /* Images */
+    .img-fluid {
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
 
-      /* Buttons */
-      .btn-outline-primary {
-        border-color: #6f52ff;
-        color: #6f52ff;
-        font-weight: 600;
-      }
+    .img-fluid:hover {
+      transform: scale(1.05);
+    }
 
-      .btn-outline-primary:hover {
-        background-color: #6f52ff;
-        color: #fff;
-      }
+    /* Buttons */
+    .btn-outline-primary {
+      border-color: #6f52ff;
+      color: #6f52ff;
+      font-weight: 600;
+    }
 
-      footer {
-        background: linear-gradient(90deg, #3b3486, #6f52ff);
-        color: #ffe9b1;
-        padding: 1rem 0;
-        margin-top: 3rem;
-      }
+    .btn-outline-primary:hover {
+      background-color: #6f52ff;
+      color: #fff;
+    }
 
-      /* Feature icons */
-      .feature-icon {
-        font-size: 1.5rem;
-        color: #6f52ff;
-        margin-right: 0.5rem;
-      }
+    footer {
+      background: linear-gradient(90deg, #3b3486, #6f52ff);
+      color: #ffe9b1;
+      padding: 1rem 0;
+      margin-top: 3rem;
+    }
 
-      /* Section spacing */
-      .section {
-        padding: 4rem 0;
-      }
-    </style>
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-  </head>
+    /* Feature icons */
+    .feature-icon {
+      font-size: 1.5rem;
+      color: #6f52ff;
+      margin-right: 0.5rem;
+    }
 
-  <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-      <img src="images/realmelogo.jpg" alt="Realme Logo" />
-      Realme
+    /* Section spacing */
+    .section {
+      padding: 4rem 0;
+    }
+
+    .full-screen-img {
+      width: 98vw;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+    }
+
+    .feature-image-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .feature-image-wrap img {
+      width: 100%;
+      display: block;
+    }
+
+    .feature-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1.2rem;
+      /* dark gradient so white text is readable over any photo */
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+      color: #fff;
+    }
+
+    .caption-title {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #f5a623;
+      /* the orange accent from your reference */
+    }
+
+    .caption-sub {
+      display: block;
+      font-size: 0.9rem;
+      color: #fff;
+      opacity: 0.9;
+    }
+  </style>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <img src="images/realmelogo.jpg" alt="Realme Logo" />
+    Realme
+  </div>
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      <div class="col">
+        <img src="images/realmeBanner.jpg" alt="Performance" class="full-screen-img" />
+      </div>
     </div>
+  </div>
 
-    <div class="container section bg-white shadow-sm rounded-4 mt-5 p-5">
-      <!-- About -->
-      <h3 class="mb-4 text-center">About Realme 10</h3>
-      <p class="lead text-center">
-        The Realme 10 combines sleek design, powerful performance, and
-        budget-friendly features for everyday users.
-      </p>
+  <div class="section bg-white shadow-sm p-5">
+    <!-- About -->
+    <h3 class="mb-4 text-center">About Realme 10</h3>
+    <p class="lead text-center">
+      The Realme 10 combines sleek design, powerful performance, and
+      budget-friendly features for everyday users.
+    </p>
 
-      <!-- Features Section -->
-      <h2 class="section-title text-center">Key Features</h2>
-      <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+    <!-- Features Section -->
+    <h2 class="section-title text-center">Key Features</h2>
+    <!-- <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
         <div class="col">
           <div class="card feature-card p-3 h-100 shadow-sm">
             <div class="d-flex align-items-center mb-2">
@@ -168,17 +213,84 @@
             <p>5000mAh battery with 33W fast charging for all-day use</p>
           </div>
         </div>
+      </div> -->
+    <div class="container">
+      <div class="row">
+
+        <div class="col-6">
+          <div class="row mt-2">
+            <div class="col">
+              <div class="feature-image-wrap">
+                <img src="images/display.jpg" alt="Display" class="img-fluid shadow" />
+                <div class="feature-caption">
+                  <span class="caption-title">90Hz Super AMOLED</span>
+                  <span class="caption-sub">Display</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <div class="feature-image-wrap">
+                <img src="images/Ram.jpg" alt="RAM" class="img-fluid shadow" />
+                <div class="feature-caption">
+                  <span class="caption-title">Up to 8GB+8GB</span>
+                  <span class="caption-sub">Dynamic RAM*</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <div class="feature-image-wrap">
+                <img src="images/mediatek.webp" alt="Chipset" class="img-fluid shadow" />
+                <div class="feature-caption">
+                  <span class="caption-title">Helio G99</span>
+                  <span class="caption-sub">Chipset</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-6">
+          <div class="row mt-2">
+            <div class="col">
+              <div class="feature-image-wrap">
+                <img src="images/camera.jpg" alt="Camera" class="img-fluid shadow " />
+                <div class="feature-caption">
+                  <span class="caption-title">50MP</span>
+                  <span class="caption-sub">Color AI Camera</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <div class="feature-image-wrap">
+                <img src="images/battery.jpg" alt="Battery" class="img-fluid shadow" style="max-height: 780px" />
+                <div class="feature-caption">
+                  <span class="caption-title">5000mAh</span>
+                  <span class="caption-sub">(typ.) Massive Battery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <!-- Design & Build -->
+
+    </div>
+
+    <!-- Design & Build -->
+    <div class="container">
       <h2 class="section-title text-center">Design & Build</h2>
       <div class="row align-items-center mb-5">
         <div class="col-md-5 text-center">
-          <img
-            src="images/realme colors.png"
-            alt="Realme 10 Colors"
-            class="img-fluid shadow"
-          />
+          <img src="images/realme colors.png" alt="Realme 10 Colors" class="img-fluid shadow" />
         </div>
         <div class="col-md-7">
           <p>
@@ -188,58 +300,29 @@
           </p>
         </div>
       </div>
-
-      <!-- Performance -->
-      <h2 class="section-title text-center">Performance</h2>
-      <div class="row align-items-center mb-5">
-        <div class="col-md-7">
-          <p>
-            MediaTek Helio G99 chipset + Mali-G57 MC2 GPU ensures smooth
-            multitasking and gaming. Combined with a 90Hz refresh rate and
-            5000mAh battery, the Realme 10 offers excellent efficiency.
-          </p>
-        </div>
-        <div class="col-md-5 text-center">
-          <img
-            src="images/mediatek.webp"
-            alt="Performance"
-            class="img-fluid shadow"
-          />
-        </div>
-      </div>
-
-      <!-- Price -->
-      <h2 class="section-title text-center">Price & Value</h2>
-      <p class="lead text-center">
-        Affordable yet powerful, the Realme 10 offers a premium experience
-        without breaking the budget.
-      </p>
-      <div class="text-center my-4">
-        <img
-          src="images/RealmePhoto.jpg"
-          alt="Realme 10 Photo"
-          class="img-fluid rounded-5 shadow"
-        />
-      </div>
-
-      <!-- Home Button -->
-      <div class="d-flex justify-content-center mt-4">
-        <button
-          onclick="window.location.href = '../index.html'"
-          class="btn btn-outline-primary btn-lg"
-        >
-          Back to Home
-        </button>
-      </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="text-center">© 2024 Copyright: MikeDharen.github.io</footer>
+    <!-- Price -->
+    <h2 class="section-title text-center">Price & Value</h2>
+    <p class="lead text-center">
+      Affordable yet powerful, the Realme 10 offers a premium experience
+      without breaking the budget.
+    </p>
+    <div class="text-center ">
+      <img src="images/realmeBottomImage.jpg" alt="Realme 10 Photo" class="img-fluid class=" full-screen-img"" />
+    </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <!-- Home Button -->
+    <div class="d-flex justify-content-center mt-4">
+      <button onclick="window.location.href = '../index.html'" class="btn btn-outline-primary btn-lg">
+        Back to Home
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
