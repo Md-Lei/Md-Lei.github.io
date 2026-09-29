@@ -1,0 +1,30 @@
+{
+  "name": "md-lei.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Md-Lei/Md-Lei.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Md-Lei/Md-Lei.github.io/issues"
+  },
+  "homepage": "https://github.com/Md-Lei/Md-Lei.github.io#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "mysql": "^2.18.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
