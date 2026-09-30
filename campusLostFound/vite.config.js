@@ -14,3 +14,4 @@ export default defineConfig({
   plugins: [react()],
   base: '/campusLostFound/', // Must match your exact repository/folder name
 })
+
