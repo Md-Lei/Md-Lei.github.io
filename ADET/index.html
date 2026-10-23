@@ -3,236 +3,274 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>App Development Projects — Mike Dharen's Portfolio</title>
+<title>App Development Projects — Mike Dharen Luansing</title>
 <link rel="icon" href="../resources/plogo.png">
+
+<!-- Latest Bootstrap 6 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  :root{
-    --bg: #1f1f2e;
-    --text: #ffffff;
-    --muted: #b3b3d1;
-    --glass: rgba(255,255,255,0.06);
-    --glass-strong: rgba(255,255,255,0.10);
-    --glass-border: rgba(255,255,255,0.14);
-    --glow-a: #6f6fce;
-    --glow-b: #3d3d78;
-    --glow-c: #9a8cf0;
-    --radius: 22px;
+  :root {
+    --bg: #0d1117;
+    --bg-deep: #090d12;
+    --text: #f0f6fc;
+    --muted: #8b949e;
+    --glass: rgba(22, 27, 34, 0.65);
+    --glass-strong: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glow-a: #6366f1;
+    --glow-b: #3b82f6;
+    --glow-c: #a855f7;
+    --accent: #818cf8;
+    --radius: 20px;
   }
 
-  *{ box-sizing: border-box; }
-  html{ scroll-behavior: smooth; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
-  body{
+  body {
     margin: 0;
     min-height: 100vh;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     position: relative;
+    line-height: 1.5;
   }
 
-  .glow{
+  /* ---- ambient background glow ---- */
+  .glow {
     position: fixed;
     border-radius: 50%;
-    filter: blur(90px);
+    filter: blur(100px);
     z-index: 0;
     pointer-events: none;
-    opacity: 0.55;
+    opacity: 0.45;
   }
-  .glow-1{
-    width: 46vw; height: 46vw;
-    top: -14vw; left: -10vw;
-    background: radial-gradient(circle at 30% 30%, var(--glow-a), transparent 70%);
+  .glow1 {
+    width: 45vw;
+    height: 45vw;
+    top: -10vw;
+    left: -10vw;
+    background: radial-gradient(circle, var(--glow-a), transparent 70%);
     animation: float1 22s ease-in-out infinite;
   }
-  .glow-2{
-    width: 40vw; height: 40vw;
-    bottom: -16vw; right: -8vw;
-    background: radial-gradient(circle at 60% 60%, var(--glow-b), transparent 70%);
+  .glow2 {
+    width: 40vw;
+    height: 40vw;
+    bottom: -12vw;
+    right: -8vw;
+    background: radial-gradient(circle, var(--glow-b), transparent 70%);
     animation: float2 26s ease-in-out infinite;
   }
-  .glow-3{
-    width: 26vw; height: 26vw;
-    top: 40vh; right: 14vw;
+  .glow3 {
+    width: 28vw;
+    height: 28vw;
+    top: 35vh;
+    right: 15vw;
     background: radial-gradient(circle, var(--glow-c), transparent 70%);
-    opacity: 0.3;
-    animation: float3 18s ease-in-out infinite;
+    opacity: 0.25;
+    animation: float3 20s ease-in-out infinite;
   }
-  @keyframes float1{ 0%,100%{ transform: translate(0,0); } 50%{ transform: translate(3vw, 4vh); } }
-  @keyframes float2{ 0%,100%{ transform: translate(0,0); } 50%{ transform: translate(-3vw, -3vh); } }
-  @keyframes float3{ 0%,100%{ transform: translate(0,0) scale(1); } 50%{ transform: translate(-2vw, 3vh) scale(1.08); } }
-  @media (prefers-reduced-motion: reduce){
-    .glow-1, .glow-2, .glow-3{ animation: none; }
+  @keyframes float1 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(3vw, 4vh); } }
+  @keyframes float2 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-3vw, -3vh); } }
+  @keyframes float3 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-2vw, 3vh) scale(1.08); } }
+  @media (prefers-reduced-motion: reduce) {
+    .glow1, .glow2, .glow3 { animation: none; }
   }
 
-  .glass{
+  /* ---- glass base ---- */
+  .glass {
     background: var(--glass);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius);
-    backdrop-filter: blur(22px) saturate(140%);
-    -webkit-backdrop-filter: blur(22px) saturate(140%);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
   }
 
-  .nav{
+  /* ---- nav ---- */
+  .nav {
     position: sticky;
-    top: 18px;
-    z-index: 10;
-    margin: 18px auto 0;
-    max-width: 920px;
+    top: 16px;
+    z-index: 100;
+    margin: 16px auto 0;
+    max-width: 900px;
+    width: calc(100% - 32px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 18px;
-    width: calc(100% - 32px);
+    padding: 10px 20px;
   }
-  .brand{
+  .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
     font-size: 15px;
+    color: var(--text);
+    text-decoration: none;
   }
-  .brand img{ height: 26px; width: auto; border-radius: 6px; }
+  .brand img {
+    height: 28px;
+    width: auto;
+    border-radius: 6px;
+    object-fit: cover;
+  }
 
-  .nav-links a{
+  .navLinks {
+    display: flex;
+    gap: 6px;
+  }
+  .navLinks a {
     color: var(--muted);
     text-decoration: none;
     font-size: 14px;
+    font-weight: 500;
     padding: 8px 16px;
     border-radius: 999px;
     transition: background 0.2s ease, color 0.2s ease;
   }
-  .nav-links a:hover{ background: var(--glass-strong); color: var(--text); }
-  .nav-links a:focus-visible{ outline: 2px solid var(--glow-c); outline-offset: 2px; }
+  .navLinks a:hover { background: var(--glass-strong); color: var(--text); }
+  .navLinks a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-  main{
+  /* ---- layout ---- */
+  main {
     position: relative;
     z-index: 1;
-    max-width: 960px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: clamp(40px, 9vw, 80px) 16px 60px;
+    padding: clamp(36px, 6vw, 64px) 16px 60px;
   }
 
-  .hero{
-    padding: clamp(28px, 5vw, 44px) clamp(24px, 6vw, 48px);
+  /* ---- hero ---- */
+  .hero {
+    padding: clamp(36px, 6vw, 56px) clamp(24px, 6vw, 48px);
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
-  .eyebrow{
+  .eyebrow {
     display: inline-block;
-    font-size: 13px;
-    letter-spacing: 0.06em;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--muted);
-    background: var(--glass-strong);
-    border: 1px solid var(--glass-border);
+    color: var(--accent);
+    background: rgba(129, 140, 248, 0.1);
+    border: 1px solid rgba(129, 140, 248, 0.25);
     padding: 6px 16px;
     border-radius: 999px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
-  h1{
+  h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: clamp(28px, 6vw, 44px);
-    margin: 0 0 10px;
+    font-size: clamp(36px, 7vw, 56px);
+    margin: 0 0 16px;
     letter-spacing: -0.02em;
-    background: linear-gradient(120deg, #ffffff, var(--glow-c));
+    background: linear-gradient(135deg, #ffffff 30%, var(--accent) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .hero p{
+  .hero p {
     color: var(--muted);
-    font-size: clamp(14px, 2.2vw, 17px);
-    max-width: 50ch;
+    font-size: clamp(15px, 2.2vw, 17px);
+    max-width: 48ch;
     margin: 0 auto;
   }
 
-  .gallery{
+  /* ---- gallery & projects ---- */
+  .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
+    margin-bottom: 24px;
   }
-  @media (max-width: 760px){
-    .gallery{ grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 760px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); }
   }
-  @media (max-width: 480px){
-    .gallery{ grid-template-columns: 1fr; }
+  @media (max-width: 480px) {
+    .gallery { grid-template-columns: 1fr; }
   }
 
-  .project{
+  .project {
     display: block;
     text-decoration: none;
     color: inherit;
-    padding: 16px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    padding: 20px 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
-  .project:hover{
-    transform: translateY(-6px);
-    border-color: rgba(154,140,240,0.5);
-    box-shadow: 0 16px 44px rgba(0,0,0,0.4), 0 0 40px rgba(154,140,240,0.18);
+  .project:hover {
+    transform: translateY(-4px);
+    border-color: rgba(129, 140, 248, 0.4);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(129, 140, 248, 0.15);
   }
-  .project:focus-visible{ outline: 2px solid var(--glow-c); outline-offset: 3px; }
-  @media (prefers-reduced-motion: reduce){
-    .project{ transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-    .project:hover{ transform: none; }
+  .project:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .project { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+    .project:hover { transform: none; }
   }
 
-  .project-thumb{
-    border-radius: 14px;
+  .projectThumb {
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--glass-border);
     aspect-ratio: 16 / 10;
     margin-bottom: 12px;
     background: var(--glass-strong);
   }
-  .project-thumb img{
-    width: 100%; height: 100%;
+  .projectThumb img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
   }
 
-  .project-name{
+  .projectName {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     text-align: center;
+    margin: 0;
   }
 
-  .home-row{
+  .homeRow {
     display: flex;
     justify-content: center;
-    margin-top: 32px;
+    margin-top: 24px;
   }
-  .btn-glass{
+  .btnGlass {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 26px;
+    gap: 10px;
+    padding: 10px 18px;
     border-radius: 999px;
     background: var(--glass-strong);
     border: 1px solid var(--glass-border);
     color: var(--text);
     text-decoration: none;
     font-size: 14px;
-    font-weight: 600;
-    transition: background 0.2s ease, transform 0.2s ease;
+    font-weight: 500;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   }
-  .btn-glass:hover{ background: rgba(255,255,255,0.18); transform: translateY(-2px); }
-  .btn-glass:focus-visible{ outline: 2px solid var(--glow-c); outline-offset: 2px; }
-  @media (prefers-reduced-motion: reduce){
-    .btn-glass:hover{ transform: none; }
+  .btnGlass:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+  }
+  .btnGlass:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    .btnGlass:hover { transform: none; }
   }
 
-  footer{
+  footer {
     position: relative;
     z-index: 1;
     text-align: center;
@@ -244,16 +282,16 @@
 </head>
 
 <body>
-  <div class="glow glow-1" aria-hidden="true"></div>
-  <div class="glow glow-2" aria-hidden="true"></div>
-  <div class="glow glow-3" aria-hidden="true"></div>
+  <div class="glow glow1" aria-hidden="true"></div>
+  <div class="glow glow2" aria-hidden="true"></div>
+  <div class="glow glow3" aria-hidden="true"></div>
 
   <nav class="nav glass" aria-label="Primary">
-    <div class="brand">
-      <img src="../resources/plogo.png" alt="">
-      MD-Luansing
-    </div>
-    <div class="nav-links">
+    <a href="../index.html" class="brand">
+      <img src="../resources/plogo.png" alt="Logo">
+      Mike Dharen Luansing
+    </a>
+    <div class="navLinks">
       <a href="../index.html">Home</a>
     </div>
   </nav>
@@ -267,28 +305,31 @@
 
     <section class="gallery">
       <a class="project glass" href="A02/index.php">
-        <div class="project-thumb"><img src="resources/chessArea.png" alt="Chess Area"></div>
-        <div class="project-name">Chess Area</div>
+        <div class="projectThumb"><img src="resources/chessArea.png" alt="Chess Area"></div>
+        <h2 class="projectName">Chess Area</h2>
       </a>
       <a class="project glass" href="A03/index.html">
-        <div class="project-thumb"><img src="A03/images/fashionHub.png" alt="Fashion Hub"></div>
-        <div class="project-name">Fashion Hub</div>
+        <div class="projectThumb"><img src="A03/images/fashionHub.png" alt="Fashion Hub"></div>
+        <h2 class="projectName">Fashion Hub</h2>
       </a>
       <a class="project glass" href="A04/index.html">
-        <div class="project-thumb"><img src="resources/coffeeShop.png" alt="Coffee Shop"></div>
-        <div class="project-name">Coffee Shop</div>
+        <div class="projectThumb"><img src="resources/coffeeShop.png" alt="Coffee Shop"></div>
+        <h2 class="projectName">Coffee Shop</h2>
       </a>
       <a class="project glass" href="A06_FE/index.html">
-        <div class="project-thumb"><img src="resources/coffeeShopAPI.png" alt="Coffee Shop API"></div>
-        <div class="project-name">Coffee Shop API</div>
+        <div class="projectThumb"><img src="resources/coffeeShopAPI.png" alt="Coffee Shop API"></div>
+        <h2 class="projectName">Coffee Shop API</h2>
       </a>
     </section>
 
-    <div class="home-row">
-      <a class="btn-glass" href="../index.html">&larr; Home</a>
+    <div class="homeRow">
+      <a class="btnGlass" href="../index.html">&larr; Home</a>
     </div>
   </main>
 
-  <footer>&copy; 2024 Md-Lei.github.io</footer>
+  <footer>&copy; 2026 Mike Dharen Luansing</footer>
+
+  <!-- Bootstrap 6 JS Bundle -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

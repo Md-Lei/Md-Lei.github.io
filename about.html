@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>About the Developer — Mike Dharen Luansing</title>
+    <title>About the Developer — Lei</title>
 
     <link rel="icon" href="resources/plogo.png" />
 
@@ -17,6 +17,27 @@
     />
 
     <link rel="stylesheet" href="resources/css/about.css">
+
+    <style>
+      /* Category grouping layout */
+      .skills-group {
+        margin-bottom: 20px;
+      }
+
+      .skills-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .skill-category-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--muted, #b3b3d1);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
 
   <body>
@@ -45,15 +66,8 @@
     <main>
       <!-- Page Header -->
 
-      <section class="page-header glass">
+      <section class="page-header p-0 glass">
         <span class="eyebrow"> About the Developer </span>
-
-        <h1>Mike Dharen Lei F. Luansing</h1>
-
-        <p>
-          An Information Technology student and aspiring developer passionate
-          about creating useful, creative, and engaging digital experiences.
-        </p>
       </section>
 
       <!-- About + Education -->
@@ -65,12 +79,12 @@
           <img
             class="profile-image"
             src="resources/profile.png"
-            alt="Mike Dharen Luansing"
+            alt="Profile"
           />
 
           <h2>Mike Dharen Luansing</h2>
 
-          <div class="role">Information Technology Student</div>
+          <div class="role">Information Technology Graduate</div>
 
           <p>
             I enjoy exploring technology, developing applications, designing
@@ -85,64 +99,71 @@
           <h2 class="section-title">Developer Information</h2>
 
           <div class="info-list">
-            <div class="info-item">
-              <span class="info-label"> Degree </span>
+            <span class="info-label"> Degree </span>
 
-              <span class="info-value">
-                Bachelor of Science in Information Technology
-              </span>
-            </div>
+            <span class="info-value">
+              Bachelor of Science in Information Technology
+            </span>
 
-            <div class="info-item">
-              <span class="info-label"> University </span>
+            <span class="info-label"> University </span>
 
-              <span class="info-value">
-                Polytechnic University of the Philippines
-              </span>
-            </div>
+            <span class="info-value">
+              Polytechnic University of the Philippines
+            </span>
 
-            <div class="info-item">
-              <span class="info-label"> Field </span>
+            <span class="info-label"> Interests </span>
 
-              <span class="info-value"> Information Technology </span>
-            </div>
-
-            <div class="info-item">
-              <span class="info-label"> Interests </span>
-
-              <span class="info-value">
-                Web Development · App Development · Software Development
-              </span>
-            </div>
+            <span class="info-value">
+              Web Development · App Development · Software Development
+            </span>
           </div>
         </article>
       </section>
 
-      <!-- Skills -->
+      <!-- Skills (Categorized & Grouped) -->
 
       <section class="skills-card glass">
         <h2 class="section-title">Skills & Technologies</h2>
 
-        <div class="skills">
-          <span class="skill">HTML</span>
-          <span class="skill">CSS</span>
-          <span class="skill">JavaScript</span>
+        <div class="skills-group">
+          <div class="skill-category-title">Frontend Development</div>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Bootstrap</span>
+            <span class="skill">ReactJS</span>
+          </div>
+        </div>
 
-          <span class="skill">PHP</span>
-          <span class="skill">MySQL</span>
+        <div class="skills-group">
+          <div class="skill-category-title">Backend & Database</div>
+          <div class="skills">
+            <span class="skill">PHP</span>
+            <span class="skill">MySQL</span>
+          </div>
+        </div>
 
-          <span class="skill">Bootstrap</span>
+        <div class="skills-group">
+          <div class="skill-category-title">Tools & Version Control</div>
+          <div class="skills">
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+          </div>
+        </div>
 
-          <span class="skill">Git</span>
-          <span class="skill">GitHub</span>
-
-          <span class="skill">Responsive Web Design</span>
-          <span class="skill">UI Design</span>
+        <div class="skills-group">
+          <div class="skill-category-title">Design & Concepts</div>
+          <div class="skills">
+            <span class="skill">Responsive Web Design</span>
+            <span class="skill">UI Design</span>
+            <span class="skill">Canva</span>
+            <span class="skill">Figma</span>
+          </div>
         </div>
       </section>
 
       <!-- Interests -->
-
       <section class="interests">
         <article class="interest glass">
           <div class="interest-icon">&lt;/&gt;</div>
@@ -181,9 +202,9 @@
       <!-- Contact -->
 
       <section id="contact" class="contact glass">
-        <a class="contact-pill" href="#"> Email </a>
+        <a class="contact-pill" href="mailto:dharenlei21@gmail.com"> Email </a>
 
-        <a class="contact-pill" href="#"> GitHub </a>
+        <a class="contact-pill" href="https://github.com/md-lei" target="_blank" rel="noopener"> GitHub </a>
 
         <a class="contact-pill" href="#"> Facebook </a>
       </section>
